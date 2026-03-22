@@ -60,6 +60,22 @@ pnpm build
 
 > Once the build is complete, the files in the `dist` folder can be uploaded to the server or imported and automatically deployed with one click using a hosting platform such as `Vercel`.
 
+### One-Click Install (Port 12379)
+
+For Linux servers. The script will auto-install Docker (if missing), pull this repo, build, and run the container.
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/cshaizhihao/home/dev/scripts/install-12379.sh | sudo bash
+```
+
+Then open:
+
+```text
+http://<your-server-ip>:12379
+```
+
+> Default container name: `home-12379`, default app directory: `/opt/home-site`
+
 ### Weather
 
 Weather and area access requires `高德开放平台` related API
@@ -137,6 +153,13 @@ make clean all
 * [IconPark](https://iconpark.oceanengine.com/official)
 * [xicons](https://xicons.org/)
 * [Aplayer](https://aplayer.js.org/)
+
+### Fork Iteration Notes (cshaizhihao/home)
+
+- `v4.1.5-zaki.1`
+  - Added one-click install script: `scripts/install-12379.sh`
+  - Added fixed-port deployment target: `12379`
+  - Updated README/README_EN deployment docs
 
 ### API
 

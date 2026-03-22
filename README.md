@@ -81,6 +81,22 @@ docker build -t home .
 docker run -p 12445:12445 -d home
 ```
 
+### 🚀 一键安装（端口 12379）
+
+适用于 Linux 服务器，脚本会自动：安装 Docker（如未安装）→ 拉取本仓库 → 构建并启动容器。
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/cshaizhihao/home/dev/scripts/install-12379.sh | sudo bash
+```
+
+部署完成后访问：
+
+```text
+http://你的服务器IP:12379
+```
+
+> 默认容器名：`home-12379`，默认源码目录：`/opt/home-site`
+
 ### ⚙️ Vercel 部署
 
 > 其他部署平台大致相同，在此不做说明
@@ -240,6 +256,13 @@ if (type == 0) {
 - [教书先生 API](https://api.oioweb.cn/doc/weather/GetWeather)
 - [高德开放平台](https://lbs.amap.com/)
 - [Hitokoto 一言](https://hitokoto.cn/)
+
+## Fork 版本迭代记录（cshaizhihao/home）
+
+- `v4.1.5-zaki.1`
+  - 新增一键安装脚本：`scripts/install-12379.sh`
+  - 新增固定端口部署方案：`12379`
+  - README 同步更新一键部署说明
 
 ## Star History
 
